@@ -42,7 +42,7 @@ class TestingConfig(Config):
 class ProductionConfig(Config):
 
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL').replace("postgres://", "postgresql://", 1)
-    
+
 #ENV CONFiG
 
 config = {

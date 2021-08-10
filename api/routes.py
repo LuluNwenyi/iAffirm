@@ -125,11 +125,21 @@ def delete_affirmation(id):
 
     affirmation = Affirmation.query.filter_by(id=id).first()
 
-    db.session.delete(affirmation)
-    db.session.commit()
+    if affirmation:
 
-    response = {
-                "message" : "You have deleted this affirmation message successfully!"
+
+        db.session.delete(affirmation)
+        db.session.commit()
+
+        response = {
+            "message" : "You have deleted this affirmation message successfully!"
             }
 
-    return jsonify(response)
+        return jsonify(response)
+
+    else:
+        response = {
+                    'message' : 'This affirmation does not exist.'
+                    }
+
+        return jsonify(response)

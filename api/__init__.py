@@ -5,7 +5,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from .config import DevelopmentConfig, config, ProductionConfig
+from .config import config, ProductionConfig
 
 app = Flask(__name__)
 app.config.from_object(ProductionConfig)

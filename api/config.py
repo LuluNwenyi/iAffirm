@@ -4,7 +4,11 @@
 
 
 import os
+import re 
 basedir = os.path.abspath(os.path.dirname(__file__))
+
+
+
 
 class Config():
 
@@ -20,7 +24,8 @@ class Config():
 class DevelopmentConfig(Config):
 
     DEBUG = True 
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') 
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL')
+ 
 
 
 # TEST CONFiG
@@ -31,11 +36,14 @@ class TestingConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL')
 
 
+
 # PRODUCTION CONFiG
 
 class ProductionConfig(Config):
 
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://", 1)
 
 
 #ENV CONFiG

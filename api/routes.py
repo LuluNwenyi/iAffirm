@@ -50,7 +50,7 @@ def get_affirmations():
     all_affirmations = []
     for affirmation in affirmations:
         affirmation_data = {}
-        affirmation_data['task_id'] = affirmation.id
+        affirmation_data['text_id'] = affirmation.id
         affirmation_data['text'] = affirmation.text
 
         all_affirmations.append(affirmation_data)

@@ -11,6 +11,15 @@ from api import db
 main = Blueprint('main', __name__)
 
 
+###############################
+######## INDEX PAGE ###########
+###############################
+
+@main.route('/')
+def index():
+    return jsonify({'message': 'Welcome to the iAffirm API'})
+
+
 #########################################
 ######## TO CREATE AFFIRMATION ##########
 #########################################

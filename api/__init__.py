@@ -14,19 +14,16 @@ mig = Migrate()
 
 def create_app(config_name):
 
+    # INIT APP CONFiG IN APP
     app.config.from_object(config[config_name])
 
+    # INIT EXTERNAL MODULES
     db.init_app(app)
-
     mig.init_app(app, db)
 
-
-    ##############################################################
-    ################ REGISTERING VIEWS ###########################
-    ##############################################################
+    # REGISTER BLUEPRINTS
 
     from api.routes import main as main_blueprint
-
     app.register_blueprint(main_blueprint)
 
     return app

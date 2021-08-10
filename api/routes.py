@@ -54,7 +54,7 @@ def get_affirmations():
 ######## TO GET ONE AFFIRMATION ##########
 ##########################################
 
-@main.route('/affirmations/<id>', methods=['GET'])
+@main.route('/affirmation/<id>', methods=['GET'])
 def get_one_affirmations(id):
 
     affirmation = Affirmation.query.filter_by(id=id).first()
@@ -92,14 +92,14 @@ def edit_affirmation(id):
             return jsonify("Affirmation updated successfully!")
 
         except Exception as e:
-            # If error occurs..
+            # IF NO ERROR OCCURS...
             response = {
                 "message": str (e)
             }
             return jsonify(response)
 
     else:
-        # If there no existing message like that, give:
+        # IF THERE IS NO SUCH MESSAGE, GIVE:
         response = {
             'message' : 'This affirmation does not exist.'
         }

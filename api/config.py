@@ -15,8 +15,7 @@ class Config():
     def init_app():
         pass
 
-###### DEV CONFIG #######
-#########################
+# DEV CONFiG
 
 class DevelopmentConfig(Config):
 
@@ -24,8 +23,7 @@ class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') 
 
 
-###### TEST CONFIG #######
-##########################
+# TEST CONFiG
 
 class TestingConfig(Config):
 
@@ -33,8 +31,7 @@ class TestingConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
 
-###### PRODUCTION CONFIG #######
-################################
+# PRODUCTION CONFiG
 
 class ProductionConfig(Config):
 

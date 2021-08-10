@@ -4,9 +4,7 @@
 
 from api import db
 
-#########################################
-########## AFFIRMATION TABLE ############
-#########################################
+# AFFiRMATION TABLE
 
 class Affirmation(db.Model):
     id = db.Column(db.Integer, primary_key=True)

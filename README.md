@@ -2,6 +2,7 @@
 # iAffirm
 
 iAffirm is to help encourage and spread positivity with the use of affirmative words. These affirmations are human written as users can enter their daily affirmations to the api, through a landing page. The affirmations are spread through tweets by the @iAffirmbot every 5 minutes at random.
+
 ## Example
 
 ![iAffirmBot](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9138771c-c81d-408f-93de-484e33e5348b/iAffirmBot.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210819%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210819T161143Z&X-Amz-Expires=86400&X-Amz-Signature=2fd0fd4608e65a36be6533786a1423725ec0c691f6e6ae73502da6da201dcbaf&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22iAffirmBot.png%22)
@@ -73,7 +74,7 @@ Activate virtual environment
 Install dependencies
 
 ```bash
-  pip install requirements.txt
+  pip install -r requirements.txt
 ```
 
 Set environment variables
@@ -110,7 +111,7 @@ Start the server
 ```
 
   
-### Documentation
+## Documentation
 
 [Documentation](http://docs.iaffirm.xyz)
 

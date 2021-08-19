@@ -49,12 +49,9 @@ Create virtual environment
 
 ```bash
   # FOR MACOS/LINUX
-
   python3 -m venv venv
 
-
   # FOR WINDOWS
-
   py -m venv env
 ```
 
@@ -62,12 +59,9 @@ Activate virtual environment
 
 ```bash
   # FOR MACOS/LINUX
-
   source venv/bin/activate
 
-
   # FOR WINDOWS
-
   .\env\Scripts\activate
 ```
 
@@ -80,10 +74,17 @@ Install dependencies
 Set environment variables
 
 ```bash
+  # FOR MACOS/LINUX
   export FLASK_APP=app.py
   export FLASK_ENV=development
   export DEV_DATABASE_URL='sqlite:///dev.db'
   export SECRET_KEY='mysecretkey'
+
+  # FOR WINDOWS
+  set FLASK_APP=app.py
+  set FLASK_ENV=development
+  set DEV_DATABASE_URL='sqlite:///dev.db'
+  set SECRET_KEY='mysecretkey'
 ```
 
 Initiate the database

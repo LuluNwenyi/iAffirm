@@ -2,28 +2,21 @@
 ######### IMPORTS ############
 ##############################
 
-
 from api.models import Affirmation
 from flask import Blueprint, jsonify, request
 from api import db
 
-
 main = Blueprint('main', __name__)
 
 
-###############################
-######## INDEX PAGE ###########
-###############################
-
+# INDEX PAGE
 @main.route('/')
 def index():
     return jsonify({'message': 'Welcome to the iAffirm API'})
 
 
-#########################################
-######## TO CREATE AFFIRMATION ##########
-#########################################
 
+# CREATE AFFIRMATION
 @main.route('/affirmation', methods=['POST'])
 def create_affirmation():
 
@@ -38,10 +31,7 @@ def create_affirmation():
 
 
 
-###########################################
-######## TO GET ALL AFFIRMATIONS ##########
-###########################################
-
+# GET ALL AFFIRMATIONS
 @main.route('/affirmations', methods=['GET'])
 def get_affirmations():
 
@@ -59,10 +49,8 @@ def get_affirmations():
 
 
 
-##########################################
-######## TO GET ONE AFFIRMATION ##########
-##########################################
 
+# GET ONE AFFIRMATION
 @main.route('/affirmation/<id>', methods=['GET'])
 def get_one_affirmations(id):
 
@@ -79,10 +67,7 @@ def get_one_affirmations(id):
 
 
 
-#########################################
-######## TO EDIT AFFIRMATION ############
-#########################################
-
+# EDIT AN AFFIRMATION 
 @main.route('/affirmation/<id>', methods=['PUT'])
 def edit_affirmation(id):
 
@@ -116,10 +101,7 @@ def edit_affirmation(id):
 
 
 
-#########################################
-######## TO DELETE AFFIRMATION ##########
-#########################################
-
+# DELETE AN AFFIRMATION
 @main.route('/affirmation/<id>', methods=['DELETE'])
 def delete_affirmation(id):
 

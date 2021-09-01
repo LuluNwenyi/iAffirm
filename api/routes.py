@@ -2,6 +2,8 @@
 ######### IMPORTS ############
 ##############################
 
+from api.decorators import admin_required
+from flask_jwt_extended.view_decorators import jwt_required
 from api.models import Affirmation
 from flask import Blueprint, jsonify, request
 from api import db
@@ -69,6 +71,8 @@ def get_one_affirmations(id):
 
 # EDIT AN AFFIRMATION 
 @main.route('/affirmation/<id>', methods=['PUT'])
+@jwt_required()
+@admin_required
 def edit_affirmation(id):
 
     affirmation = Affirmation.query.filter_by(id=id).first()
@@ -103,6 +107,8 @@ def edit_affirmation(id):
 
 # DELETE AN AFFIRMATION
 @main.route('/affirmation/<id>', methods=['DELETE'])
+@jwt_required()
+@admin_required
 def delete_affirmation(id):
 
     affirmation = Affirmation.query.filter_by(id=id).first()

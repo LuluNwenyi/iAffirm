@@ -40,7 +40,7 @@ def create_admin():
             password = request.json['password']
             password = generate_password_hash(password)
 
-            new_admin = Admin(username=username, email=email, password=password)
+            new_admin = Admin(username=username, email=email, password=password, admin=True)
 
             db.session.add(new_admin)
             db.session.commit()

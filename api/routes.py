@@ -3,7 +3,7 @@
 ##############################
 
 from api.decorators import admin_required
-from flask_jwt_extended.view_decorators import jwt_required
+from flask_jwt_extended import jwt_required
 from api.models import Affirmation
 from flask import Blueprint, jsonify, request
 from api import db

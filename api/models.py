@@ -22,6 +22,7 @@ class Admin(db.Model):
     username = db.Column(db.String)
     password = db.Column(db.String)
     email = db.Column(db.String)
+    admin = db.Column(db.Boolean)
 
     def to_json(self):
         return {"username": self.username, "email": self.email}

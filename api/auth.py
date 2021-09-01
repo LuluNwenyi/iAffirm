@@ -3,7 +3,7 @@
 ##############################
 
 from flask import Blueprint, jsonify, request, make_response, url_for, current_app, abort
-from api import db, jwt, mail, ACCESS_EXPIRES
+from api import db, jwt, ACCESS_EXPIRES
 from .models import Admin, TokenBlocklist
 from .decorators import admin_required
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt

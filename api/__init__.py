@@ -2,6 +2,7 @@
 ######### IMPORTS ############
 ##############################
 
+from datetime import timedelta
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -14,6 +15,8 @@ app.config.from_object(ProductionConfig)
 db = SQLAlchemy(app)
 mig = Migrate()
 jwt = JWTManager(app)
+
+ACCESS_EXPIRES = timedelta(hours=24)
 
 def create_app(config_name):
 

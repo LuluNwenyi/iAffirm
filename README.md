@@ -125,6 +125,6 @@ Start the server
   
 ## Feedback
 
-For feedback or ideas/contributions, email dev@lulunwenyi.com.
+For feedback or ideas/contributions, email [oluchinwenyi@gmail.com](mailto:oluchinwenyi@gmail.com).
 
 If you'd like to support this project, feel free to [buymeacoffee](https://www.buymeacoffee.com/lulunwenyi).
